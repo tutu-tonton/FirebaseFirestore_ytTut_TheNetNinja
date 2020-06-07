@@ -13,7 +13,11 @@
 		<h1>Cloud Cafe</h1>
 
 		<div class="content">
-			<form id="add-cafe-form"></form>
+			<form id="add-cafe-form">
+				<input type="text" name="name" placeholder="Cafe name" />
+				<input type="text" name="city" placeholder="Cafe city" />
+				<button>Add Cafe</button>
+			</form>
 
 			<ul id="cafe-list"></ul>
 		</div>
@@ -36,7 +40,7 @@
 			// firestoreへの参照を準備
 			const db = firebase.firestore();
 			// スナップショットを操作するための準備
-			db.settings({ timestampsInSnapshots: true });
+			// db.settings({ timestampsInSnapshots: true });
 		</script>
 		<script src="app.js"></script>
 	</body>
