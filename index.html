@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1>Cloud Cafe</h1>
+
+		<div class="content">
+			<form id="add-cafe-form"></form>
+
+			<ul id="cafe-list"></ul>
+		</div>
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: 'AIzaSyAmLI6FJrRbNiWJEI8FoC5_lzm76Ta7mrk',
+				authDomain: 'ninja-firestore-tut-8f56b.firebaseapp.com',
+				databaseURL: 'https://ninja-firestore-tut-8f56b.firebaseio.com',
+				projectId: 'ninja-firestore-tut-8f56b',
+				storageBucket: 'ninja-firestore-tut-8f56b.appspot.com',
+				messagingSenderId: '97950597898',
+				appId: '1:97950597898:web:41f1a0ef7ed29f8219b0f3',
+				measurementId: 'G-ST6QF1X4GV',
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+			// firestoreへの参照を準備
+			const db = firebase.firestore();
+			// スナップショットを操作するための準備
+			db.settings({ timestampsInSnapshots: true });
+		</script>
+		<script src="app.js"></script>
+	</body>
+</html>
